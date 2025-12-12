@@ -41,6 +41,32 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  
+  /* Custom App Colors */
+  --color-app-blue-50: var(--app-blue-50);
+  --color-app-blue-100: var(--app-blue-100);
+  --color-app-blue-400: var(--app-blue-400);
+  --color-app-blue-500: var(--app-blue-500);
+  --color-app-blue-600: var(--app-blue-600);
+  --color-app-blue-700: var(--app-blue-700);
+  --color-app-blue-900: var(--app-blue-900);
+  --color-app-blue-950: var(--app-blue-950);
+  --color-app-gray-50: var(--app-gray-50);
+  --color-app-gray-200: var(--app-gray-200);
+  --color-app-gray-300: var(--app-gray-300);
+  --color-app-gray-400: var(--app-gray-400);
+  --color-app-gray-500: var(--app-gray-500);
+  --color-app-gray-600: var(--app-gray-600);
+  --color-app-gray-700: var(--app-gray-700);
+  --color-app-gray-800: var(--app-gray-800);
+  --color-app-gray-900: var(--app-gray-900);
+  --color-app-gray-950: var(--app-gray-950);
+  --color-app-green-600: var(--app-green-600);
+  --color-app-green-700: var(--app-green-700);
+  --color-app-red-600: var(--app-red-600);
+  --color-app-red-700: var(--app-red-700);
+  --color-app-white: var(--app-white);
+  --color-app-black: var(--app-black);
 }
 
 :root {
@@ -75,7 +101,37 @@
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-ring: oklch(0.556 0 0);
+  
+  /* Custom App Colors */
+  --app-blue-50: oklch(0.975 0.013 251.662);
+  --app-blue-100: oklch(0.938 0.037 248.998);
+  --app-blue-400: oklch(0.687 0.166 249.996);
+  --app-blue-500: oklch(0.615 0.195 254.624);
+  --app-blue-600: oklch(0.537 0.201 262.881);
+  --app-blue-700: oklch(0.456 0.169 264.376);
+  --app-blue-900: oklch(0.276 0.089 265.755);
+  --app-blue-950: oklch(0.206 0.066 267.09);
+  
+  --app-gray-50: oklch(0.987 0 0);
+  --app-gray-200: oklch(0.904 0 0);
+  --app-gray-300: oklch(0.838 0 0);
+  --app-gray-400: oklch(0.681 0 0);
+  --app-gray-500: oklch(0.581 0 0);
+  --app-gray-600: oklch(0.506 0 0);
+  --app-gray-700: oklch(0.436 0 0);
+  --app-gray-800: oklch(0.327 0 0);
+  --app-gray-900: oklch(0.234 0 0);
+  --app-gray-950: oklch(0.145 0 0);
+  
+  --app-green-600: oklch(0.587 0.176 149.579);
+  --app-green-700: oklch(0.519 0.154 150.697);
+  
+  --app-red-600: oklch(0.577 0.245 27.325);
+  --app-red-700: oklch(0.508 0.226 27.325);
+  
+  --app-white: oklch(1 0 0);
+  --app-black: oklch(0 0 0);
 }
 
 .dark {
@@ -110,6 +166,36 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  
+  /* Custom App Colors - Dark Mode */
+  --app-blue-50: oklch(0.206 0.066 267.09);
+  --app-blue-100: oklch(0.276 0.089 265.755);
+  --app-blue-400: oklch(0.687 0.166 249.996);
+  --app-blue-500: oklch(0.615 0.195 254.624);
+  --app-blue-600: oklch(0.687 0.166 249.996);
+  --app-blue-700: oklch(0.615 0.195 254.624);
+  --app-blue-900: oklch(0.276 0.089 265.755);
+  --app-blue-950: oklch(0.206 0.066 267.09);
+  
+  --app-gray-50: oklch(0.145 0 0);
+  --app-gray-200: oklch(0.436 0 0);
+  --app-gray-300: oklch(0.506 0 0);
+  --app-gray-400: oklch(0.708 0 0);
+  --app-gray-500: oklch(0.708 0 0);
+  --app-gray-600: oklch(0.681 0 0);
+  --app-gray-700: oklch(0.436 0 0);
+  --app-gray-800: oklch(0.327 0 0);
+  --app-gray-900: oklch(0.234 0 0);
+  --app-gray-950: oklch(0.145 0 0);
+  
+  --app-green-600: oklch(0.587 0.176 149.579);
+  --app-green-700: oklch(0.519 0.154 150.697);
+  
+  --app-red-600: oklch(0.577 0.245 27.325);
+  --app-red-700: oklch(0.508 0.226 27.325);
+  
+  --app-white: oklch(0.985 0 0);
+  --app-black: oklch(0 0 0);
 }
 
 @layer base {

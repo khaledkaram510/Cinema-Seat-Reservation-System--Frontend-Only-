@@ -1,0 +1,25 @@
+
+> my-app@0.1.0 build /mnt/drive1/coding/code_files/frontend/Cinema Seat Reservation System (Frontend Only)
+> next build
+
+   ▲ Next.js 16.0.7 (Turbopack)
+
+   Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./src/app/page.tsx:210:20
+Parsing ecmascript source code failed
+[0m [90m 208 |[39m   )
+ [90m 209 |[39m }
+[31m[1m>[22m[39m[90m 210 |[39m             [33mDeploy[39m [33mNow[39m
+ [90m     |[39m                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 211 |[39m           [33m<[39m[33m/[39m[33ma[39m[33m>[39m
+ [90m 212 |[39m           [33m<[39m[33ma[39m
+ [90m 213 |[39m             className[33m=[39m[32m"flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"[39m[0m
+
+Expected ';', '}' or <eof>
+
+
+    at <unknown> (./src/app/page.tsx:210:20)
+ ELIFECYCLE  Command failed with exit code 1.
