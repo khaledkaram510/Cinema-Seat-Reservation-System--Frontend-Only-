@@ -1,12 +1,15 @@
 "use client";
 
 import { Seat } from "./Seat";
+import type { UserData } from "@/hooks/useSeatBooking";
 
 interface SeatGridProps {
   rows: number;
   seatsPerRow: number;
   selectedSeats: number[];
   bookedSeats: number[];
+  selectedDelSeats?: number[];
+  userData?: UserData | null;
   onToggleSeat: (seatNumber: number) => void;
 }
 
@@ -15,6 +18,8 @@ export function SeatGrid({
   seatsPerRow,
   selectedSeats,
   bookedSeats,
+  userData,
+  selectedDelSeats = [],
   onToggleSeat,
 }: SeatGridProps) {
   const seatRows = Array.from({ length: rows }, (_, rowIndex) => {
@@ -23,7 +28,7 @@ export function SeatGrid({
       return seatNumber;
     });
   });
-
+  // console.log("SeatGrid render:", { selectedDelSeats });
   return (
     <div className="space-y-4">
       {/* Screen indicator */}
@@ -53,12 +58,18 @@ export function SeatGrid({
                 {row.map((seatNumber) => (
                   <Seat
                     key={seatNumber}
+                    selectedDelSeats={selectedDelSeats}
+                    selectedSeats={selectedSeats}
                     seatNumber={seatNumber}
                     isSelected={selectedSeats.includes(seatNumber)}
+                    isDelSelected={selectedDelSeats.includes(seatNumber)}
                     isBooked={bookedSeats.includes(seatNumber)}
                     onToggle={onToggleSeat}
                     rowLabel={rowLabel}
                     colNumber={(seatNumber % seatsPerRow) + 1}
+                    bookedByMe={userData?.seats?.some(
+                      (seat) => seat.seatNumber === seatNumber
+                    )}
                   />
                 ))}
               </div>
@@ -85,6 +96,10 @@ export function SeatGrid({
         <div className="flex items-center gap-2">
           <div className="h-6 w-6 rounded border-2 border-app-gray-400 bg-app-gray-300" />
           <span className="text-sm text-app-gray-600">Booked</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="h-6 w-6 rounded border-2 border-app-green-500 bg-app-green-500" />
+          <span className="text-sm text-app-gray-600">Booked by me</span>
         </div>
       </div>
     </div>

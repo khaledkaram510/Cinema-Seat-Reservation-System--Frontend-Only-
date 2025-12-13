@@ -11,31 +11,33 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { downloadFile, formatDate, formatSeats } from "@/lib/generateTicketId";
+import { downloadFile, formatDate } from "@/lib/generateTicketId";
 import { Copy, Download, Check } from "lucide-react";
+import type { UserData } from "@/hooks/useSeatBooking";
 
 interface TicketDialogProps {
   isOpen: boolean;
+  onSuccess: () => void;
   onClose: () => void;
   ticketId: string;
-  selectedSeats: number[];
+  selectedSeats: UserData["seats"];
   seatsPerRow: number;
   cinemaName?: string;
   movieTitle?: string;
 }
 
 export function TicketDialog({
+  onSuccess: _onSuccess,
   isOpen,
   onClose,
   ticketId,
   selectedSeats,
-  seatsPerRow,
+  seatsPerRow: _seatsPerRow,
   cinemaName = "Cineplex Theatre",
   movieTitle = "Select a Movie",
 }: TicketDialogProps) {
   const [copied, setCopied] = useState(false);
-
-  const seatLabels = formatSeats(selectedSeats, seatsPerRow);
+  const seatLabels = (selectedSeats ?? []).map((seat) => seat.seatTitle);
   const bookingDate = new Date();
 
   const handleCopyTicketId = async () => {
