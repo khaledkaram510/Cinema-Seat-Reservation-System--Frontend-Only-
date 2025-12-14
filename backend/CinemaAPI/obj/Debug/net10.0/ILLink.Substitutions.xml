@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="CinemaAPI">
+    <resource name="FSharpSignatureData.CinemaAPI" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.CinemaAPI" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.CinemaAPI" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.CinemaAPI" action="remove"></resource>
+    <resource name="FSharpOptimizationData.CinemaAPI" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.CinemaAPI" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.CinemaAPI" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.CinemaAPI" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.CinemaAPI" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.CinemaAPI" action="remove"></resource>
+  </assembly>
+</linker>

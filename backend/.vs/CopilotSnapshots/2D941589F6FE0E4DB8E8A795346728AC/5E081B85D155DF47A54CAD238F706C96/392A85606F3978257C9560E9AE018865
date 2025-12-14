@@ -1,0 +1,118 @@
+﻿module SeatLayout
+
+//open System
+
+//type SeatStatus = 
+//    | Available
+//    | Booked of ticketId:string
+
+
+//type Layout = SeatStatus [,]
+
+//let createLayout rows cols =
+//    Array2D.init rows cols (fun _ _ -> Available)
+
+//let rowCharToIndex (ch:char) = int (System.Char.ToUpper ch) - int 'A'
+//let indexToRowChar (i:int) = char (int 'A' + i)
+
+//let inBounds rows cols r c =
+//    r >= 0 && r < rows && c >= 0 && c < cols
+
+//let isSeatAvailable (layout:Layout) r c =
+//    match layout.[r,c] with
+//    | Available -> true
+//    | Booked _ -> false
+
+//let getStatus (layout:Layout) r c =
+//    layout.[r,c]
+
+//let setAvailable (layout:Layout) r c =
+//    layout.[r,c] <- Available
+
+
+////  "A3" -> (rowIndex , colIndex)-> (A,2)
+//let parseSeatCode (seat:string) =
+//    if String.IsNullOrWhiteSpace seat || seat.Length < 2 then
+//        Error "Invalid seat format"
+//    else
+//        let rowChar = System.Char.ToUpper seat.[0]
+//        let row = rowCharToIndex rowChar
+//        let colStr = seat.Substring(1)
+//        match System.Int32.TryParse colStr with
+//        | true, col -> Ok (row, col - 1)
+//        | _ -> Error "Column must be a number"
+
+//let validateSeat (layout:Layout) (r,c) =
+//    let rows = Array2D.length1 layout
+//    let cols = Array2D.length2 layout
+//    if r < 0 || r >= rows then Error "Row out of range"
+//    elif c < 0 || c >= cols then Error "Column out of range"
+//    else Ok ()
+
+    
+//// first version of tryBookSeat
+//let tryBookSeat (layout:Layout) r c =
+//    if not (inBounds (Array2D.length1 layout) (Array2D.length2 layout) r c) then
+//        Error "out of bounds"
+//    else
+//        match layout.[r,c] with
+//        | Available ->
+//            let ticketId = Ticket.generateTicketId()   // ← توليد ID تلقائي
+//            layout.[r,c] <- Booked ticketId
+//            Ok ticketId                         // ← رجّع ID
+//        | Booked _ -> Error "already booked"
+
+//// book by seat code like "A3" using previous functions
+//let bookByCode (layout:Layout) (seatCode:string) =
+//    match parseSeatCode seatCode with
+//    | Error e -> Error e
+//    | Ok (r,c) ->
+//        match validateSeat layout (r,c) with
+//        | Error e -> Error e
+//        | Ok () ->
+//            tryBookSeat layout r c
+
+//// cancel booking by seat code like "A3"
+//let cancelBooking (layout:Layout) seatCode =
+//    match parseSeatCode seatCode with
+//    | Error e -> Error e
+//    | Ok (r,c) ->
+//        match validateSeat layout (r,c) with
+//        | Error e -> Error e
+//        | Ok () ->
+//            match layout.[r,c] with
+//            | Available -> Error "Seat is not booked"
+//            | Booked _ ->
+//                setAvailable layout r c
+//                Ok ()
+
+//// get status by seat code like "A3"
+//let getStatusByCode (layout:Layout) seatCode =
+//    match parseSeatCode seatCode with
+//    | Error e -> Error e
+//    | Ok (r,c) ->
+//        match validateSeat layout (r,c) with
+//        | Error e -> Error e
+//        | Ok () -> Ok (getStatus layout r c)
+
+
+
+//let displaySimple (layout:Layout) =
+//    let rows = Array2D.length1 layout
+//    let cols = Array2D.length2 layout
+//    printf "   "
+//    for c in 1 .. cols do printf "%2d " c
+//    printfn ""
+//    for r in 0 .. rows-1 do
+//        printf "%c  " (indexToRowChar r)
+//        for c in 0 .. cols-1 do
+//            let ch =
+//                match layout.[r,c] with
+//                | Available -> "O"
+//                | Booked _ -> "X"
+//            printf "%2s " ch
+//        printfn ""
+
+
+
+

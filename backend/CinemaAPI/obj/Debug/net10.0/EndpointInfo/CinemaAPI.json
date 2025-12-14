@@ -1,0 +1,144 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "CinemaAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/seats/{seatCode}": {
+      "get": {
+        "tags": [
+          "Pipe #10 input at line 68@68"
+        ],
+        "parameters": [
+          {
+            "name": "seatCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/book/{ticketId}": {
+      "delete": {
+        "tags": [
+          "Pipe #12 input at line 96@96"
+        ],
+        "parameters": [
+          {
+            "name": "ticketId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/layout": {
+      "get": {
+        "tags": [
+          "Pipe #13 input at line 135@135"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "tags": [
+          "Pipe #8 input at line 49@49"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/book": {
+      "post": {
+        "tags": [
+          "Pipe #9 input at line 52@52"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SeatRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SeatRequest": {
+        "type": "object",
+        "properties": {
+          "seatCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Pipe #10 input at line 68@68"
+    },
+    {
+      "name": "Pipe #12 input at line 96@96"
+    },
+    {
+      "name": "Pipe #13 input at line 135@135"
+    },
+    {
+      "name": "Pipe #8 input at line 49@49"
+    },
+    {
+      "name": "Pipe #9 input at line 52@52"
+    }
+  ]
+}

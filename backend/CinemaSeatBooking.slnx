@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CinemaAPI/CinemaAPI.fsproj" Id="cc9c86ab-9fd0-4fff-956f-1cf6670e8ab9" />
+  <Project Path="CinemaSeatBooking/CinemaSeatBooking.fsproj" />
+</Solution>
