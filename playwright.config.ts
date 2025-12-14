@@ -1,3 +1,5 @@
+import path from "path";
+
 import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
@@ -10,8 +12,10 @@ export default defineConfig({
   reporter: "list",
   use: {
     baseURL: process.env.PLAYWRIGHT_BASE_URL || "http://localhost:3000",
-    headless: false,
+    headless: true,
     trace: "on-first-retry",
+    acceptDownloads: true,
+    downloadsPath: path.join(__dirname, "tickets"),
   },
   webServer: {
     command: "pnpm dev --port 3000",
