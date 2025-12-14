@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>CinemaCore</name></assembly>
+<members>
+<member name="M:CinemaCore.SeatLayout.createHall(System.String,System.Int32,System.Int32)">
+<summary>
+ Create a new hall (rows × seatsPerRow) with all seats Available
+</summary>
+</member>
+<member name="M:CinemaCore.SeatLayout.setSeatState(CinemaCore.CinemaState,CinemaCore.SeatPosition,CinemaCore.SeatState)">
+<summary>
+ Immutable-style update: clone array then set seat
+</summary>
+</member>
+<member name="M:CinemaCore.Cinema.bookSeatsDto(CinemaCore.CinemaState,Microsoft.FSharp.Collections.FSharpList{CinemaCore.SeatPosition})">
+<summary>
+ Main booking wrapper for C#
+</summary>
+</member>
+<member name="M:CinemaCore.Cinema.formatTicket(CinemaCore.Ticket)">
+<summary>
+ Used by UI to print ticket
+</summary>
+</member>
+<member name="M:CinemaCore.Cinema.displayMap(CinemaCore.CinemaState)">
+<summary>
+ Used by UI to display seat map
+</summary>
+</member>
+<member name="M:CinemaCore.Cinema.initCinema(System.String,System.Int32,System.Int32)">
+<summary>
+ Used by UI to create a hall
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,26 @@
+D:\year4\pl3\project\CinemaBooking\CinemaCore\bin\Debug\net9.0\CinemaCore.deps.json
+D:\year4\pl3\project\CinemaBooking\CinemaCore\bin\Debug\net9.0\CinemaCore.dll
+D:\year4\pl3\project\CinemaBooking\CinemaCore\bin\Debug\net9.0\CinemaCore.pdb
+D:\year4\pl3\project\CinemaBooking\CinemaCore\bin\Debug\net9.0\CinemaCore.xml
+D:\year4\pl3\project\CinemaBooking\CinemaCore\obj\Debug\net9.0\CinemaCore.fsproj.AssemblyReference.cache
+D:\year4\pl3\project\CinemaBooking\CinemaCore\obj\Debug\net9.0\CinemaCore.AssemblyInfoInputs.cache
+D:\year4\pl3\project\CinemaBooking\CinemaCore\obj\Debug\net9.0\CinemaCore.AssemblyInfo.fs
+D:\year4\pl3\project\CinemaBooking\CinemaCore\obj\Debug\net9.0\CinemaCore.fsproj.CoreCompileInputs.cache
+D:\year4\pl3\project\CinemaBooking\CinemaCore\obj\Debug\net9.0\CinemaCore.dll
+D:\year4\pl3\project\CinemaBooking\CinemaCore\obj\Debug\net9.0\refint\CinemaCore.dll
+D:\year4\pl3\project\CinemaBooking\CinemaCore\obj\Debug\net9.0\CinemaCore.xml
+D:\year4\pl3\project\CinemaBooking\CinemaCore\obj\Debug\net9.0\CinemaCore.pdb
+D:\year4\pl3\project\CinemaBooking\CinemaCore\obj\Debug\net9.0\ref\CinemaCore.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaCore\bin\Debug\net9.0\CinemaCore.deps.json
+D:\year4\pl3\project\CinemaBooking DB\CinemaCore\bin\Debug\net9.0\CinemaCore.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaCore\bin\Debug\net9.0\CinemaCore.pdb
+D:\year4\pl3\project\CinemaBooking DB\CinemaCore\bin\Debug\net9.0\CinemaCore.xml
+D:\year4\pl3\project\CinemaBooking DB\CinemaCore\obj\Debug\net9.0\CinemaCore.fsproj.AssemblyReference.cache
+D:\year4\pl3\project\CinemaBooking DB\CinemaCore\obj\Debug\net9.0\CinemaCore.AssemblyInfoInputs.cache
+D:\year4\pl3\project\CinemaBooking DB\CinemaCore\obj\Debug\net9.0\CinemaCore.AssemblyInfo.fs
+D:\year4\pl3\project\CinemaBooking DB\CinemaCore\obj\Debug\net9.0\CinemaCore.fsproj.CoreCompileInputs.cache
+D:\year4\pl3\project\CinemaBooking DB\CinemaCore\obj\Debug\net9.0\CinemaCore.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaCore\obj\Debug\net9.0\refint\CinemaCore.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaCore\obj\Debug\net9.0\CinemaCore.xml
+D:\year4\pl3\project\CinemaBooking DB\CinemaCore\obj\Debug\net9.0\CinemaCore.pdb
+D:\year4\pl3\project\CinemaBooking DB\CinemaCore\obj\Debug\net9.0\ref\CinemaCore.dll

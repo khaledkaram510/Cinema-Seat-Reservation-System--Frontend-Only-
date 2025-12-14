@@ -1,0 +1,87 @@
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\CinemaDesktop.exe
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\CinemaDesktop.deps.json
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\CinemaDesktop.runtimeconfig.json
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\CinemaDesktop.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\CinemaDesktop.pdb
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\FSharp.Core.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\cs\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\de\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\es\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\fr\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\it\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\ja\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\ko\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\pl\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\pt-BR\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\ru\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\tr\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\zh-Hans\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\zh-Hant\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\CinemaCore.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\CinemaCore.pdb
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\bin\Debug\net9.0-windows\CinemaCore.xml
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.csproj.AssemblyReference.cache
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\MainWindow.g.cs
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\App.g.cs
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop_MarkupCompile.cache
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop_MarkupCompile.lref
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\MainWindow.baml
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.g.resources
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.GeneratedMSBuildEditorConfig.editorconfig
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.AssemblyInfoInputs.cache
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.AssemblyInfo.cs
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.csproj.CoreCompileInputs.cache
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDe.5AE4A037.Up2Date
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\refint\CinemaDesktop.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.pdb
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.genruntimeconfig.cache
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\ref\CinemaDesktop.dll
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\Pages\CreateHallPage.baml
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\Pages\BookingPage.g.cs
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\Pages\CreateHallPage.g.cs
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\Pages\BookingPage.baml
+D:\year4\pl3\project\CinemaBooking\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.sourcelink.json
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\CinemaDesktop.exe
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\CinemaDesktop.deps.json
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\CinemaDesktop.runtimeconfig.json
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\CinemaDesktop.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\CinemaDesktop.pdb
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\FSharp.Core.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\cs\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\de\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\es\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\fr\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\it\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\ja\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\ko\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\pl\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\pt-BR\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\ru\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\tr\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\zh-Hans\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\zh-Hant\FSharp.Core.resources.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\CinemaCore.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\CinemaCore.pdb
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\bin\Debug\net9.0-windows\CinemaCore.xml
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.csproj.AssemblyReference.cache
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\MainWindow.baml
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\Pages\CreateHallPage.baml
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\MainWindow.g.cs
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\Pages\BookingPage.g.cs
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\Pages\CreateHallPage.g.cs
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\App.g.cs
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop_MarkupCompile.cache
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop_MarkupCompile.lref
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\Pages\BookingPage.baml
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.g.resources
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.GeneratedMSBuildEditorConfig.editorconfig
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.AssemblyInfoInputs.cache
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.AssemblyInfo.cs
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.csproj.CoreCompileInputs.cache
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDe.5AE4A037.Up2Date
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\refint\CinemaDesktop.dll
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.pdb
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\CinemaDesktop.genruntimeconfig.cache
+D:\year4\pl3\project\CinemaBooking DB\CinemaDesktop\obj\Debug\net9.0-windows\ref\CinemaDesktop.dll

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="CinemaCore">
+    <resource name="FSharpSignatureData.CinemaCore" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedData.CinemaCore" action="remove"></resource>
+    <resource name="FSharpSignatureDataB.CinemaCore" action="remove"></resource>
+    <resource name="FSharpSignatureCompressedDataB.CinemaCore" action="remove"></resource>
+    <resource name="FSharpOptimizationData.CinemaCore" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedData.CinemaCore" action="remove"></resource>
+    <resource name="FSharpOptimizationDataB.CinemaCore" action="remove"></resource>
+    <resource name="FSharpOptimizationCompressedDataB.CinemaCore" action="remove"></resource>
+    <resource name="FSharpOptimizationInfo.CinemaCore" action="remove"></resource>
+    <resource name="FSharpSignatureInfo.CinemaCore" action="remove"></resource>
+  </assembly>
+</linker>
