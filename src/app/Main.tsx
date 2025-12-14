@@ -1,51 +1,41 @@
 "use client";
 
-import { use, useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Navbar } from "../components/custom/Navbar";
 import { SeatGrid } from "../components/custom/SeatGrid";
 import { TicketDialog } from "../components/custom/TicketDialog";
-import type { UserData, SeatLayout } from "../hooks/useSeatBooking";
+import type { UserData } from "../hooks/useSeatBooking";
 import { useSeatBooking } from "../hooks/useSeatBooking";
-import { RotateCcw, Check, XOctagon } from "lucide-react";
+import { Check, XOctagon } from "lucide-react";
 import Footer from "@/components/custom/Footer";
 import Loading from "@/components/custom/Loading";
-import _ from "lodash";
 import { ConfirmBookingDialog } from "@/components/custom/ConfirmBookingDialog";
 import { deleteSeat } from "@/lib/utils";
 
 const CINEMA_NAME = "Cineplex Theatre";
 const MOVIE_TITLE = "The Blockbuster Movie";
 
-export default function Main({
-  getLayout,
-}: {
-  getLayout: Promise<SeatLayout>;
-}) {
-  const layout = use(getLayout);
-
+export default function Main() {
   const {
     selectedSeats,
     selectedDelSeats,
     bookedSeats,
     data,
+    layoutLoading,
+    layoutError,
     userData,
     toggleSeat,
     toggleDelSeat,
     confirmBooking,
     clearSelection,
     clearDelSelection,
-    setData,
     setUserData,
     removeUserSeats,
     removeBookedSeats,
+    refreshLayout,
   } = useSeatBooking();
-  // console.log(_.isEqual(layout,data))
-  if (layout && !_.isEqual(layout, data)) {
-    // console.log(layout)
-    setData(layout);
-  }
 
   // const [ticketId, setTicketId] = useState<string | null>("sssfffss");
   const [showTicketDialog, setShowTicketDialog] = useState(false);
@@ -78,6 +68,7 @@ export default function Main({
   const handleCloseTicketDialog = () => {
     setShowTicketDialog(false);
     confirmBooking();
+    refreshLayout();
   };
   // const handleSuccessTicketDialog = () => {
   //   // setShowTicketDialog(false);
@@ -123,12 +114,25 @@ export default function Main({
       // setCancelSeats([]);
       clearSelection();
       clearDelSelection();
+      refreshLayout();
     } catch (error) {
       console.error("Failed to cancel booking", error);
     }
   };
 
-  if (!data) {
+  if (layoutError) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-app-gray-50">
+        <Card>
+          <CardContent className="p-6 text-center text-app-red-600">
+            Failed to load layout. Please try again.
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  if (layoutLoading || !data) {
     return <Loading />;
   }
 

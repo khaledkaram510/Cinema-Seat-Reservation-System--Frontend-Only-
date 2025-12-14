@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { getLayout } from "@/lib/utils";
 
 export interface SeatBookingState {
   selectedSeats: number[];
@@ -45,49 +46,77 @@ export function useSeatBooking() {
   const [bookedSeats, setBookedSeats] = useState<number[]>([]);
   const [userData, setUserData] = useState<UserData | null>(null);
   const [data, setData] = useState<SeatLayout | null>(null);
+  const [layoutLoading, setLayoutLoading] = useState(true);
+  const [layoutError, setLayoutError] = useState<Error | null>(null);
   console.log("bookedSeats:", bookedSeats);
   // Load booking state from localStorage on mount
-  useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY+"_userData");
-    if (stored) {
+  // useEffect(() => {
+
+  //   // if (stored) {
+  //   //   try {
+  //   //     const { selectedSeats: stored_selected, bookedSeats: stored_booked } =
+  //   //       JSON.parse(stored);
+  //   //     setSelectedSeats(stored_selected || []);
+  //   //     setBookedSeats(stored_booked || DEFAULT_BOOKED_SEATS);
+  //   //   } catch {
+  //   //     setBookedSeats(DEFAULT_BOOKED_SEATS);
+  //   //   }
+  //   // } else {
+  //   //   setBookedSeats(DEFAULT_BOOKED_SEATS);
+  //   // }
+  //   // setIsLoaded(true);
+  // }, []);
+
+  const loadLayout = useCallback(async () => {
+    setLayoutLoading(true);
+    try {
+      const layout = (await getLayout()) as SeatLayout;
+      setData(layout);
+      const seatsObject = layout.seats;
+      const booked = Object.keys(seatsObject)
+        .map((seatKey, index) =>
+          seatsObject[seatKey] !== "available" ? index : -1
+        )
+        .filter((index) => index !== -1);
+      setBookedSeats(booked);
+
+      // Apply cached user data only for seats that are still booked
+      let cachedUserData: UserData | null = null;
       try {
-        const parsedUserData: UserData = JSON.parse(stored);
-        setUserData(parsedUserData);
+        const stored = localStorage.getItem(STORAGE_KEY + "_userData");
+        if (stored) {
+          cachedUserData = JSON.parse(stored) as UserData;
+        }
       } catch {
-        // Ignore parsing errors
+        cachedUserData = null;
       }
+
+      if (cachedUserData) {
+        const filteredSeats = cachedUserData.seats.filter((seat) =>
+          booked.includes(seat.seatNumber)
+        );
+        const modifiedUserData = { ...cachedUserData, seats: filteredSeats };
+        setUserDataFunction(modifiedUserData);
+      }
+    } catch (error) {
+      setLayoutError(error as Error);
+    } finally {
+      setLayoutLoading(false);
     }
-    // if (stored) {
-    //   try {
-    //     const { selectedSeats: stored_selected, bookedSeats: stored_booked } =
-    //       JSON.parse(stored);
-    //     setSelectedSeats(stored_selected || []);
-    //     setBookedSeats(stored_booked || DEFAULT_BOOKED_SEATS);
-    //   } catch {
-    //     setBookedSeats(DEFAULT_BOOKED_SEATS);
-    //   }
-    // } else {
-    //   setBookedSeats(DEFAULT_BOOKED_SEATS);
-    // }
-    // setIsLoaded(true);
   }, []);
 
-  
-  useEffect(() => { // NOTE: here we will make bookedSeats to be set for more performance in searching and another operations
-    if (!data) return;
+  useEffect(() => {
+    let isMounted = true;
+    loadLayout();
+    return () => {
+      isMounted = false;
+    };
+  }, [loadLayout]);
 
-    const seatsObject = data.seats;
-
-    const booked = Object.keys(seatsObject).map((seatKey, index) => {
-      if (seatsObject[seatKey] !== "available") {
-        return index;
-      }
-      return -1;
-    }).filter(index => index !== -1);
-    // console.log(booked);
-    // If you want these to drive the hook's bookedSeats state, uncomment:
-    setBookedSeats(booked);
-  }, [data]);
+  // useEffect(() => {
+  //   // NOTE: here we will make bookedSeats to be set for more performance in searching and another operations
+  //   if (!data) return;
+  // }, [data]);
 
   // Save booking state to localStorage whenever it changes
   // useEffect(() => {
@@ -102,17 +131,34 @@ export function useSeatBooking() {
   //   }
   // }, [selectedSeats, bookedSeats, isLoaded]);
   const setUserDataFunction = (userDataParam: UserData) => {
-    if (!userData){
-    localStorage.setItem(STORAGE_KEY + "_userData", JSON.stringify(userDataParam));
-    console.log("setting user data:",userDataParam);
-    setUserData(userDataParam);
-    }else{
-      const modifiedUserDataParam = { ...userDataParam , seats: [{...userDataParam.seats[0], seatNumber: selectedSeats[0]}]};
-      const mergedUserData = { ...userData, seats: [...userData.seats, ...modifiedUserDataParam.seats] };
-      localStorage.setItem(STORAGE_KEY + "_userData", JSON.stringify(mergedUserData));
-      console.log("merged user data:",mergedUserData);
-      setUserData(mergedUserData);
+    // Ensure each ticket is linked to the currently selected seat number
+    const normalizedSeats = (userDataParam.seats ?? []).map((seat, index) => ({
+      ...seat,
+      seatNumber: selectedSeats[index] ?? seat.seatNumber,
+    }));
+
+    const baseUserData: UserData = { ...userDataParam, seats: normalizedSeats };
+
+    if (!userData) {
+      localStorage.setItem(
+        STORAGE_KEY + "_userData",
+        JSON.stringify(baseUserData)
+      );
+      console.log("setting user data:", baseUserData);
+      setUserData(baseUserData);
+      return;
     }
+
+    const mergedUserData = {
+      ...userData,
+      seats: [...userData.seats, ...baseUserData.seats],
+    };
+    localStorage.setItem(
+      STORAGE_KEY + "_userData",
+      JSON.stringify(mergedUserData)
+    );
+    console.log("merged user data:", mergedUserData);
+    setUserData(mergedUserData);
   };
   const removeUserSeats = (seatNumbers: number[]) => {
     if (!userData || seatNumbers.length === 0) return;
@@ -129,7 +175,9 @@ export function useSeatBooking() {
 
   const removeBookedSeats = (seatNumbers: number[]) => {
     if (seatNumbers.length === 0) return;
-    setBookedSeats((prev) => prev.filter((seat) => !seatNumbers.includes(seat)));
+    setBookedSeats((prev) =>
+      prev.filter((seat) => !seatNumbers.includes(seat))
+    );
   };
   const toggleSeat = (seatNumber: number) => {
     // Don't allow selecting already booked seats
@@ -181,6 +229,8 @@ export function useSeatBooking() {
     selectedDelSeats,
     bookedSeats,
     data,
+    layoutLoading,
+    layoutError,
     userData,
     toggleSeat,
     toggleDelSeat,
@@ -189,9 +239,10 @@ export function useSeatBooking() {
     clearDelSelection,
     resetBookings,
     setData,
-    setUserData :setUserDataFunction,
+    setUserData: setUserDataFunction,
     removeUserSeats,
     removeBookedSeats,
+    refreshLayout: loadLayout,
     // isLoaded,
   };
 }

@@ -47,7 +47,7 @@ export function Seat({
       // onToggle(seatNumber);
     }
   };
-  // console.log(isBooked, bookedByMe, isSelected,isDelSelected,seatNumber);
+  console.log(isBooked, bookedByMe, isSelected,isDelSelected,seatNumber);
   // const bookedByMe = userData?.seats?.some((seat) => seat.seatNumber === seatNumber);
   return (
     <button

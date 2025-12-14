@@ -57,10 +57,10 @@ export function SeatGrid({
               <div className="flex gap-2">
                 {row.map((seatNumber) => (
                   <Seat
-                    key={seatNumber}
+                    key={seatNumber }
                     selectedDelSeats={selectedDelSeats}
                     selectedSeats={selectedSeats}
-                    seatNumber={seatNumber}
+                    seatNumber={seatNumber }
                     isSelected={selectedSeats.includes(seatNumber)}
                     isDelSelected={selectedDelSeats.includes(seatNumber)}
                     isBooked={bookedSeats.includes(seatNumber)}
@@ -68,7 +68,7 @@ export function SeatGrid({
                     rowLabel={rowLabel}
                     colNumber={(seatNumber % seatsPerRow) + 1}
                     bookedByMe={userData?.seats?.some(
-                      (seat) => seat.seatNumber === seatNumber
+                      (seat) => seat.seatNumber === seatNumber 
                     )}
                   />
                 ))}
